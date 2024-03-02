@@ -53,7 +53,7 @@ mod tests {
     #[test]
     #[cfg(all(
         any(target_arch = "x86", target_arch = "x86_64"),
-        target_feature = "avx2"
+        target_feature = "avx512bw"
     ))]
     fn test_rsum_avx512bw_u8() {
         let input = vec![0 as u8; 1024];
