@@ -42,10 +42,7 @@ mod tests {
     }
 
     #[test]
-    #[cfg(all(
-        any(target_arch = "x86", target_arch = "x86_64"),
-        target_feature = "avx2"
-    ))]
+    #[cfg(target_feature = "avx2")]
     fn test_rsum_avx2_u8() {
         let input = vec![0 as u8; 1024];
         let mut out = vec![0 as u8; 1024];
