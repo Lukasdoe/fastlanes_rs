@@ -5,7 +5,8 @@ use std::{env, fs};
 const FASTLANES_REPO: &str = "https://github.com/Lukasdoe/FastLanes";
 const FASTLANES_BRANCH: &str = "rust-pkg";
 const FASTLANES_PATH: &str = "thirdparty/FastLanes";
-const FASTLANES_HEADER_PATH: &str = "fls_generated/include/fls_gen/rsum/rsum.hpp";
+const FASTLANES_HEADER_PATH1: &str = "fls_generated/include/fls_gen/rsum/rsum.hpp";
+const FASTLANES_HEADER_PATH2: &str = "fls_generated/include/fls_gen/untranspose/untranspose.hpp";
 
 fn main() {
     if !Path::new(FASTLANES_PATH).exists() {
@@ -38,7 +39,13 @@ fn main() {
     let bindings = bindgen::Builder::default()
         .header(
             Path::new(FASTLANES_PATH)
-                .join(FASTLANES_HEADER_PATH)
+                .join(FASTLANES_HEADER_PATH1)
+                .to_str()
+                .unwrap(),
+        )
+        .header(
+            Path::new(FASTLANES_PATH)
+                .join(FASTLANES_HEADER_PATH2)
                 .to_str()
                 .unwrap(),
         )

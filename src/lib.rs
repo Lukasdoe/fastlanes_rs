@@ -63,4 +63,13 @@ mod tests {
             generated_rsum_x86_64_avx512bw_rsum(input.as_ptr(), out.as_mut_ptr(), base.as_ptr())
         };
     }
+
+    #[test]
+    fn test_untranspose() {
+        let input = vec![0 as u8; 1024];
+        let mut out = vec![0 as u8; 1024];
+        unsafe {
+            generated_untranspose_fallback_scalar_untranspose_i3(input.as_ptr(), out.as_mut_ptr())
+        };
+    }
 }
