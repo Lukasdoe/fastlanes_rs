@@ -1,3 +1,6 @@
+// Credit: these numbers are taken from the official FastLanes GitHub repository:
+// https://github.com/cwida/FastLanes/blob/5feb61d3b5078e5499690b51b30bd9a94556ccf6/fls_generated/fallback/scalar_nav_uf1/fallback_scalar_nav_1024_uf1_rsum_helper.hpp
+
 pub const UNTRANSPONSED: [u32; 1024] = [
     1, 2, 2, 5, 8, 8, 8, 9, 9, 10, 11, 13, 13, 13, 15, 17, 18, 18, 19, 23, 25, 25, 27, 27, 27, 28,
     30, 30, 30, 31, 35, 36, 37, 39, 39, 40, 40, 41, 42, 43, 44, 45, 45, 48, 48, 49, 49, 50, 51, 51,

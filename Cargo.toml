@@ -1,7 +1,12 @@
 [package]
-name = "fastlanes"
+name = "fastlanes_rs"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Wrapper for the FastLanes Compression Format C++ library"
+homepage = "https://github.com/cwida/FastLanes/"
+repository = "https://github.com/Lukasdoe/fastlanes_rs"
+readme = "README.md"
 
 [dependencies]
 

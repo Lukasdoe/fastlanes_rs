@@ -98,7 +98,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "fastlanes"
+name = "fastlanes_rs"
 version = "0.1.0"
 dependencies = [
  "bindgen",
